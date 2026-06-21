@@ -19,7 +19,7 @@ export default function HeroBanner() {
           </motion.div>
         </motion.div>
         <motion.div className="hero-image" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800" alt="Leather collection" />
+            <img src="https://picsum.photos/seed/hero/800/600" alt="Leather collection" />
         </motion.div>
       </div>
     </section>
