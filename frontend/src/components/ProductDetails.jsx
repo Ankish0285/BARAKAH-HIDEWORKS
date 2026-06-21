@@ -1,11 +1,13 @@
 import { formatPrice, calculateDiscount } from "../utils/formatPrice";
 import { useCart } from "../hooks";
+import React, { useState } from "react";
 import WishlistButton from "./WishlistButton";
 import ReviewSection from "./ReviewSection";
 
 export default function ProductDetails({ product }) {
   const { addToCart } = useCart();
   const discount = calculateDiscount(product.price, product.originalPrice);
+  const [selectedImage, setSelectedImage] = useState(product?.images?.[0] || product.image);
 
   if (!product) {
     return <p className="empty">Product not found.</p>;
@@ -15,8 +17,19 @@ export default function ProductDetails({ product }) {
     <div className="product-details">
       <div className="product-details-grid">
         <div className="product-gallery">
-          <img src={product.image} alt={product.name} />
+          <img src={selectedImage} alt={product.name} className="main-product-image" />
           {discount > 0 && <span className="discount-badge">-{discount}% OFF</span>}
+          <div className="thumbnail-gallery">
+            {product.images?.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`${product.name} thumbnail ${index + 1}`}
+                className={`thumbnail ${selectedImage === img ? "active" : ""}`}
+                onClick={() => setSelectedImage(img)}
+              />
+            ))}
+          </div>
         </div>
         <div className="product-details-info">
           <h1>{product.name}</h1>

@@ -19,7 +19,7 @@ export default function HeroBanner() {
           </motion.div>
         </motion.div>
         <motion.div className="hero-image" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <img src="https://placehold.co/800x600/E0BBE4/FFFFFF/png?text=Luxury+Leather+Handbag" alt="Luxury Women's Leather Handbag" />
+            <img src="https://placehold.co/800x600/E0BBE4/FFFFFF/png?text=Barakah+Hideworks+Luxury+Handbag+with+Embossed+Logo" alt="Barakah Hideworks Luxury Women's Leather Handbag with Embossed Logo" />
         </motion.div>
       </div>
     </section>
