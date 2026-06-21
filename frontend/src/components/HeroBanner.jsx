@@ -19,7 +19,7 @@ export default function HeroBanner() {
           </motion.div>
         </motion.div>
         <motion.div className="hero-image" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <img src="https://picsum.photos/seed/hero/800/600" alt="Leather collection" />
+            <img src="https://placehold.co/800x600/E0BBE4/FFFFFF/png?text=Luxury+Leather+Handbag" alt="Luxury Women's Leather Handbag" />
         </motion.div>
       </div>
     </section>

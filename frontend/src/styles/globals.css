@@ -544,7 +544,7 @@ img {
 /* Products */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Larger cards */
   gap: 32px;
 }
 
@@ -600,9 +600,9 @@ img {
 }
 
 .quick-view-btn {
-  background: linear-gradient(135deg, var(--white) 0%, var(--background) 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, #FBC02D 100%); /* Highlight quick view */
   color: var(--primary-dark);
-  padding: 12px 28px;
+  padding: 14px 32px; /* Larger button */
   border: none;
   border-radius: var(--radius-md);
   font-weight: 800;
