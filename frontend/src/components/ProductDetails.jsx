@@ -5,13 +5,13 @@ import WishlistButton from "./WishlistButton";
 import ReviewSection from "./ReviewSection";
 
 export default function ProductDetails({ product }) {
-  const { addToCart } = useCart();
-  const discount = calculateDiscount(product.price, product.originalPrice);
-  const [selectedImage, setSelectedImage] = useState(product?.images?.[0] || product.image);
-
   if (!product) {
     return <p className="empty">Product not found.</p>;
   }
+
+  const { addToCart } = useCart();
+  const discount = calculateDiscount(product.price, product.originalPrice);
+  const [selectedImage, setSelectedImage] = useState(product.images?.[0] || product.image);
 
   return (
     <div className="product-details">
